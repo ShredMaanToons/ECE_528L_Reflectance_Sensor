@@ -22,7 +22,7 @@
 
 3. Write a void function named P5_0_and_P9_7_Init that takes no arguments and configures the P5.0 and P9.7 pins as output GPIO pins. Initialize the value of the P5.0 and P9.7 pins to zero.
 
-4. Write a void function named Print_Binary
+4. Write a void function named Print_Binary    
 (Included as file in repository.)
 </details>
 
