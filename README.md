@@ -25,7 +25,15 @@ P5.3 controls the even sensors and P9.2 controls the odd. The default value is o
 ```
 void P5_0_and_P9_7_Init(void)
 {
+    P5->SEL0 &= ~(0x01)
+    P5->SEL1 &= ~(0x01)
+    P5->DIR |= (0x01)
+    P5->OUT &= ~(0x01)
 
+    P9->SEL0 &= ~(0x80)
+    P9->SEL1 &= ~(0x80)
+    P9->DIR |= (0x80)
+    P9->OUT &= ~(0x80)
 }
 ```
 
