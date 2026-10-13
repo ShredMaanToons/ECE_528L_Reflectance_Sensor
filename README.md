@@ -263,6 +263,10 @@ We gained a thorough understanding of all the concepts in the lab and successful
 We both completed every component of the lab and worked on the report together.    
 </details>
 
+
+
+
+
 <details>
 <summary><h2>References</h2></summary>
 
@@ -274,6 +278,4 @@ We both completed every component of the lab and worked on the report together.
 
 [MSP432P4xx SimpleLink Microcontrollers Technical Reference Manual](https://web.archive.org/web/20200402132841/http:/www.ti.com/lit/ug/slau356i/slau356i.pdf)
 
-[PMOD SWT Reference Manual](https://digilent.com/reference/pmod/pmodswt/reference-manual)
-
-[PMOD LED Reference Manual](https://reference.digilentinc.com/reference/pmod/pmodled/reference-manual)
+[8-Channel QTRX Sensor Array Product Page](https://www.pololu.com/product/3672)
