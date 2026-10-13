@@ -21,6 +21,18 @@
 #include "inc/Reflectance_Sensor.h"
 #include "inc/Print_Binary.h"
 
+const uint8_t CENTER = 0x18;
+const uint8_t SLIGHT_LEFT = 0x1C;
+const uint8_t SLIGHT_RIGHT = 0x38;
+const uint8_t FAR_LEFT = 0x01;
+const uint8_t FAR_RIGHT = 0x80;
+const uint8_t LEFT_TURN = 0xF8;
+const uint8_t RIGHT_TURN = 0x1F;
+const uint8_t T = 0xFF;
+const uint8_t END = 0x00;
+
+void Detect_Line_Position(uint8_t reflectance_sensor_data);
+
 int main(void)
 {
     // Initialize the 48 MHz Clock
@@ -43,6 +55,54 @@ int main(void)
     {
         reflectance_sensor_data = Reflectance_Sensor_Read(1000);
         Print_Binary(reflectance_sensor_data);
+        Detect_Line_Position(reflectance_sensor_data);
         Clock_Delay1ms(10);
     }
 }
+
+
+void Detect_Line_Position(uint8_t reflectance_sensor_data){
+    switch(reflectance_sensor_data){
+        case CENTER:
+            LED1_Output(RED_LED_OFF);
+            LED2_Output(RGB_LED_GREEN);
+            break;
+        case SLIGHT_LEFT:
+            LED1_Output(RED_LED_OFF);
+            LED2_Output(RGB_LED_YELLOW);
+            break;
+        case SLIGHT_RIGHT:
+            LED1_Output(RED_LED_OFF);
+            LED2_Output(RGB_LED_PINK);
+            break;
+        case FAR_LEFT:
+            LED1_Output(RED_LED_OFF);
+            LED2_Output(RGB_LED_WHITE);
+            break;
+        case FAR_RIGHT:
+            LED1_Output(RED_LED_OFF);
+            LED2_Output(RGB_LED_SKY_BLUE);
+            break;
+        case LEFT_TURN:
+            LED1_Output(RED_LED_ON);
+            LED2_Output(RGB_LED_WHITE);
+            break;
+        case RIGHT_TURN:
+            LED1_Output(RED_LED_ON);
+            LED2_Output(RGB_LED_SKY_BLUE);
+            break;
+        case T:
+            LED1_Output(RED_LED_OFF);
+            LED2_Output(RGB_LED_BLUE);
+            break;
+        case END:
+            LED1_Output(RED_LED_OFF);
+            LED2_Output(RGB_LED_RED);
+            break;
+        default:
+            LED1_Output(RED_LED_OFF);
+            LED2_Output(RGB_LED_OFF);
+            break;
+    }
+}
+

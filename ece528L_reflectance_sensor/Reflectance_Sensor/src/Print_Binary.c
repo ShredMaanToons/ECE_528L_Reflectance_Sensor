@@ -11,9 +11,20 @@
  */
 
 #include "../inc/Print_Binary.h"
+#include <stdio.h>
+#include <stdint.h>
 
 void Print_Binary(uint8_t value_to_convert)
 {
-    // Your Print_Binary function implementation goes here
+    // Start from the Most Significant Bit (bit 7) down to bit 0
+    for (int i = 7; i >= 0; i--) {
+            printf("%d", (value_to_convert >> i) & 1);
 
+            if(i==4){
+                printf("_");
+            }
+    }
+    printf("\n");
 }
+
+// Program base written by AI, converted into a usable format by Thomas Anderson
