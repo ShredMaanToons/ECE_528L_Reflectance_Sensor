@@ -15,14 +15,14 @@
 <details>
 <summary><h2>Prelab Questions</h2></summary>
 
-1. What does a reflectance sensor consist of? How many reflectance sensors are on the QTRX Reflectance Sensor Array? What is its operating voltage?
+1. <b>What does a reflectance sensor consist of? How many reflectance sensors are on the QTRX Reflectance Sensor Array? What is its operating voltage?</b>    
+A reflectance sensor consists of an LED and phototransistor. The QTRX Reflectance Sensor Array consists of eight reflectance sensors. The operating voltage is 5V.
 
+2. <b>Which control pins on the QTRX Reflectance Sensor Array are responsible for enabling the reflectance sensors? What is their default value after powering on the sensor array? List the pin names and the pin numbers used to connect the two control pins.</b>    
 
-2. Which control pins on the QTRX Reflectance Sensor Array are responsible for enabling the reflectance sensors? What is their default value after powering on the sensor array? List the pin names and the pin numbers used to connect the two control pins.
+3. <b>Write a void function named P5_0_and_P9_7_Init that takes no arguments and configures the P5.0 and P9.7 pins as output GPIO pins. Initialize the value of the P5.0 and P9.7 pins to zero.</b>    
 
-3. Write a void function named P5_0_and_P9_7_Init that takes no arguments and configures the P5.0 and P9.7 pins as output GPIO pins. Initialize the value of the P5.0 and P9.7 pins to zero.
-
-4. Write a void function named Print_Binary    
+4. <b>Write a void function named Print_Binary</b>    
 (Included as file in repository.)
 </details>
 
