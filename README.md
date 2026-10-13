@@ -19,8 +19,15 @@
 A reflectance sensor consists of an LED and phototransistor. The QTRX Reflectance Sensor Array consists of eight reflectance sensors. The operating voltage is 5V.
 
 2. <b>Which control pins on the QTRX Reflectance Sensor Array are responsible for enabling the reflectance sensors? What is their default value after powering on the sensor array? List the pin names and the pin numbers used to connect the two control pins.</b>    
+P5.3 controls the even sensors and P9.2 controls the odd. The default value is off (0). The pin names are "Reflectance Sensor Ctrl Even" and "Reflectance Sensor Ctrl Odd".
 
 3. <b>Write a void function named P5_0_and_P9_7_Init that takes no arguments and configures the P5.0 and P9.7 pins as output GPIO pins. Initialize the value of the P5.0 and P9.7 pins to zero.</b>    
+```
+void P5_0_and_P9_7_Init(void)
+{
+
+}
+```
 
 4. <b>Write a void function named Print_Binary</b>    
 (Included as file in repository.)
